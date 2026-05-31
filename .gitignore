@@ -14,9 +14,8 @@ node_modules/
 frontend/dist/
 frontend/.vite/
 
-# Local-only: video script, screenshots, scratch
+# Local-only: video script + scratch (screenshots ARE committed, see screenshots/)
 docs/
-*.png
 .shots/
 
 # Editors / OS / logs

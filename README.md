@@ -22,6 +22,15 @@ thousands of times; the frontend stages it like a TV graphics package.
   grid (the exact distribution the simulator samples from).
 - **Ratings explorer** — watch every team's Elo evolve from 1500 over time.
 
+## Screenshots
+
+| | |
+|---|---|
+| ![Start screen](screenshots/01-intro.png)<br>**Start screen** | ![Group stage](screenshots/05-group-stage.png)<br>**Group stage — live-sorting tables** |
+| ![Knockout bracket](screenshots/06-bracket.png)<br>**Knockout bracket** | ![Champion reveal](screenshots/07-champion.png)<br>**Champion reveal** |
+| ![Monte Carlo](screenshots/04-monte-carlo.png)<br>**Monte-Carlo title odds** | ![Match predictor](screenshots/02-predictor.png)<br>**Match predictor (score grid)** |
+| ![Ratings explorer](screenshots/03-ratings.png)<br>**Ratings explorer (Elo over time)** | |
+
 ## Architecture
 
 ```

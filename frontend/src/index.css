@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stage: #06120d;
+  --color-stage-2: #0b1d15;
+  --color-panel: #0f241a;
+  --color-panel-2: #143023;
+  --color-ink: #eef6f0;
+  --color-muted: #8aa597;
+  --color-line: #1d3b2b;
+  --color-brand: #2f6df0;
+  --color-brand-deep: #1e3a8a;
+  --color-cyan: #22d3c7;
+  --color-accent: #c8ff35;
+  --color-win: #43e08a;
+  --color-loss: #ff5d6c;
+  --color-pitch: #36b271;
+  --color-pitch-deep: #11713f;
+
+  --font-display: "Saira Condensed", system-ui, sans-serif;
+  --font-body: "Saira", system-ui, sans-serif;
+  --font-num: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-stage);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabular figures so scores/tables never reflow as digits change. */
+.tabnum {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+}
+
+.display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* Broadcast stage: dark turf base with mowed-grass stripes + pitch glow. */
+.stage-bg {
+  position: relative;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 64px, rgba(54, 178, 113, 0.028) 64px 128px),
+    radial-gradient(1100px 600px at 82% -12%, rgba(47, 109, 240, 0.14), transparent 60%),
+    radial-gradient(1150px 720px at 50% 120%, rgba(54, 178, 113, 0.2), transparent 62%),
+    var(--color-stage);
+}
+.stage-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}

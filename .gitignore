@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Raw dataset — large and regenerable via `uv run wm2026 download-data`
+data/
+
+# Node / frontend build output
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Local-only: video script, screenshots, scratch
+docs/
+*.png
+.shots/
+
+# Editors / OS / logs
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Note: trained artifacts in artifacts/ ARE committed (small) so the app runs
+# out of the box; regenerate them anytime with `uv run wm2026 train`.
